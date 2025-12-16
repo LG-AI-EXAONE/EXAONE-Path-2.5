@@ -1,0 +1,17 @@
+hf_transformers/
+patch_encoder-hf/
+slide_encoder-hf/
+scripts/
+exaonepath/create_patches/
+exaonepath/extract_patch_features/
+samples/
+temp/
+    
+
+__pycache__/
+*.pyc
+.venv/
+.env
+*.log
+*.pt
+*.pth

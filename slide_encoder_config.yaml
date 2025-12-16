@@ -1,0 +1,17 @@
+wsi_encoder:
+  aggregate: mean
+  attn_drop: 0.2
+  attn_type: linear
+  depth: 6
+  embed_dim: 768
+  embed_use_norm: true
+  ffn_bias: true
+  ffn_drop: 0.2
+  ffn_layer: swiglu128
+  ffn_ratio: 4.0
+  input_dim: 768
+  n_storage_tokens: 7
+  nope_interval: 2
+  num_heads: 12
+  out_l2_norm: true
+  qkv_bias: true
