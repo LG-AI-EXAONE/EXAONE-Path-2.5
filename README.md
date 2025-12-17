@@ -10,11 +10,7 @@ tags:
 
 
 # EXAONE Path 2.5
-[[`Github`](https://github.com/LG-AI-EXAONE/EXAONE-Path-2.5)] [[`Hugging Face`](https://huggingface.co/LGAI-EXAONE/EXAONE-Path-2.5)] [Paper]: *to appear*
-
-<!-- [[Paper]](to appear) -->
-
-<!-- [[`BibTeX`](#Citation)] -->
+[[`Github`](https://github.com/LG-AI-EXAONE/EXAONE-Path-2.5)] [[`Hugging Face`](https://huggingface.co/LGAI-EXAONE/EXAONE-Path-2.5)] [[`Paper`](https://arxiv.org/abs/2512.14019)] [[`Cite`](#citation)]
 
 ## Introduction
 EXAONE Path 2.5 is a biologically informed multimodal framework that enriches histopathology representations by aligning whole-slide images with *genomic, epigenetic, and transcriptomic data*. By enabling all-pairwise cross-modal alignment across multiple layers of tumor biology, the model captures coherent genotype-to-phenotype relationships within a unified embedding space. This domain-informed design improves resource efficiency, enabling the model to achieve competitive performance across diverse tasks while using substantially fewer training samples and parameters than existing approaches.
@@ -51,7 +47,7 @@ EXAONE Path 2.5 inference follows a two-stage pipeline. **(1) Patch-level featur
 
 
 #### 3.1. Patch Feature Extraction
-You can extract the pretained patch features (without multimodal alignment) in two ways. 
+You can extract the pretrained patch features (without multimodal alignment) in two ways. 
 - **3.1.1 (Tensor output)**: for rapid prototyping or custom pipelines
 - **3.1.2 (HDF5 file output)**: for full WSI processing, visualization, and downstream slide encoding
 
@@ -232,6 +228,22 @@ Experiments on internal multi-institutional clinical datasets and the 80-task Pa
 
 ## License
 The model is licensed under [EXAONEPath AI Model License Agreement 1.0 - NC](./LICENSE)
+
+
+## Citation
+If you find EXAONE Path 2.5 useful in your research, please cite:
+
+```bibtex
+@misc{yun2025exaonepath25,
+    title        = {EXAONE Path 2.5: Pathology Foundation Model with Multi-Omics Alignment},
+    author       = {Yun, Juseung and Yu, Sunwoo and Ha, Sumin and Kim, Jonghyun and Lee, Janghyeon and Jang, Jongseong and Lee, Soonyoung},
+    year         = {2025},
+    eprint       = {2512.14019},
+    archivePrefix= {arXiv},
+    primaryClass = {cs.LG},
+    url          = {https://arxiv.org/abs/2512.14019}
+}
+```
 
 ## Contact
 LG AI Research Technical Support: <a href="mailto:contact_us1@lgresearch.ai">contact_us1@lgresearch.ai</a>
