@@ -13,6 +13,7 @@ This requires the Hub repo to include `exaonepath/`.
 from typing import Any, Dict, Optional
 import importlib
 import sys
+from pathlib import Path
 
 from huggingface_hub import snapshot_download
 from torch import Tensor, nn
@@ -49,7 +50,8 @@ class ExaonePathPatchEncoderModel(PreTrainedModel):
         # Ensure the repo code (including `exaonepath/`) is available at runtime.
         repo_id = getattr(config, "_name_or_path", None) or getattr(config, "name_or_path", None)
         if isinstance(repo_id, str) and repo_id:
-            local_root = snapshot_download(repo_id)
+            repo_path = Path(repo_id)
+            local_root = str(repo_path.resolve()) if repo_path.exists() else snapshot_download(repo_id)
             if local_root not in sys.path:
                 sys.path.insert(0, local_root)
 

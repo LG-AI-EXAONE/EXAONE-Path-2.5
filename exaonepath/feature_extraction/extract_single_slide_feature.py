@@ -175,7 +175,7 @@ def main(args):
     # Load transform
     transform = transforms.Compose(
         [
-            transforms.Resize(256),
+            transforms.Resize(224),
             transforms.CenterCrop(224),
             transforms.ToTensor(),
             transforms.Normalize(

@@ -6,7 +6,7 @@ exaonepath/create_patches/
 exaonepath/extract_patch_features/
 samples/
 temp/
-    
+.vscode/
 
 __pycache__/
 *.pyc
