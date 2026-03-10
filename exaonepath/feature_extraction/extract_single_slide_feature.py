@@ -164,11 +164,9 @@ def main(args):
 
     # Load model
     print("Loading model...")
-    repo_id = "LGAI-EXAONE/EXAONE-Path-2.5"
-
     model = AutoModel.from_pretrained(
-        repo_id,
-        subfolder="patch-encoder",
+        args.repo_id,
+        component="patch",
         trust_remote_code=True,
     ).to(device).eval()
 
